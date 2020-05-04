@@ -5,9 +5,6 @@ name: default
 steps:
   - name: publish
     image: sherryummen/drone-helm3
-    settings:
-      mode: publish
-      chart: ./
     environment:
       REGISTRY_URL:
         from_secret: registry_url
@@ -15,3 +12,9 @@ steps:
         from_secret: registry_login_user_id
       REGISTRY_LOGIN_PASSWORD:
         from_secret: registry_login_password
+    settings:
+      mode: publish
+      chart: ./
+      registry_url: $REGISTRY_URL
+      registry_login_user_id: $REGISTRY_LOGIN_USER_ID
+      registry_login_password: $REGISTRY_LOGIN_PASSWORD
