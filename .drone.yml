@@ -6,8 +6,6 @@ steps:
   - name: publish
     image: sherryummen/drone-helm3
     environment:
-      REGISTRY_URL:
-        from_secret: registry_url
       REGISTRY_LOGIN_USER_ID: 
         from_secret: registry_login_user_id
       REGISTRY_LOGIN_PASSWORD:
