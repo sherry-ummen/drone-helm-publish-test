@@ -1,0 +1,17 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: uninstall
+    image: sherryummen/drone-helm3
+    ssettings:
+      mode: publish
+      chart: ./
+    environment:
+      REGISTRY_URL:
+        from_secret: registry_url
+      REGISTRY_LOGIN_USER_ID: 
+        from_secret: registry_login_user_id
+      REGISTRY_LOGIN_PASSWORD:
+        from_secret: registry_login_password
