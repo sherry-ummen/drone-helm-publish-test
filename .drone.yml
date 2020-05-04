@@ -15,6 +15,6 @@ steps:
     settings:
       mode: publish
       chart: ./
-      registry_url: $REGISTRY_URL
+      registry_url: dromehelmcharts.azurecr.io
       registry_login_user_id: $REGISTRY_LOGIN_USER_ID
-      registry_login_password: $REGISTRY_LOGIN_PASSWORD
+      registry_login_password: $REGISTRY_LOGIN_PASS
