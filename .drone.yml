@@ -6,15 +6,15 @@ steps:
   - name: publish
     image: sherryummen/drone-helm3
     environment:
+      REGISTRY_URL: 
+        from_secret: registry_url
       REGISTRY_LOGIN_USER_ID: 
         from_secret: registry_login_user_id
       REGISTRY_LOGIN_PASSWORD:
         from_secret: registry_login_password
       REGISTRY_REPO_NAME: helm/drone-helm-publish-test
-      CHART_VERSION: 0.1.1
+      CHART_VERSION: 0.1.2
     settings:
       mode: publish
       chart: ./
-      registry_url: dromehelmcharts.azurecr.io
-      registry_login_user_id: $REGISTRY_LOGIN_USER_ID
-      registry_login_password: $REGISTRY_LOGIN_PASS
+
