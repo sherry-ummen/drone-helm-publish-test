@@ -10,6 +10,8 @@ steps:
         from_secret: registry_login_user_id
       REGISTRY_LOGIN_PASSWORD:
         from_secret: registry_login_password
+      REGISTRY_REPO_NAME: helm/drone-helm-publish-test
+      CHART_VERSION: 0.1.0
     settings:
       mode: publish
       chart: ./
